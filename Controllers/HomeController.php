@@ -14,8 +14,9 @@ class HomeController
     public function indexHome()
     {
         require "./config/config.php";
-
+//say hello//
         require './Views/home.php';
+
 
     }
 
