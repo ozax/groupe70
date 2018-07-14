@@ -1,13 +1,14 @@
-<script src="<?=$repertory?>/static/vendor/jquery/jquery.min.js"></script>
-<script src="<?=$repertory?>/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- Core plugin JavaScript-->
-<script src="<?=$repertory?>/static/vendor/jquery-easing/jquery.easing.min.js"></script>
-<!-- Page level plugin JavaScript-->
-<script src="<?=$repertory?>/static/vendor/chart.js/Chart.min.js"></script>
-<script src="<?=$repertory?>/static/vendor/datatables/jquery.dataTables.js"></script>
-<script src="<?=$repertory?>/static/vendor/datatables/dataTables.bootstrap4.js"></script>
-<!-- Custom scripts for all pages-->
-<script src="<?=$repertory?>/static/js/sb-admin.min.js"></script>
-<!-- Custom scripts for this page-->
-<script src="<?=$repertory?>/static/js/sb-admin-datatables.min.js"></script>
-<script src="<?=$repertory?>/static/js/sb-admin-charts.min.js"></script>
+<script src="../static/assets/js/core/jquery.min.js" type="text/javascript"></script>
+<script src="../static/assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="../static/assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+<script src="../static/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<!--  Google Maps Plugin    -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!-- Chartist JS -->
+<script src="../static/assets/js/plugins/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="../static/assets/js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+<script src="../static/assets/js/material-dashboard.min.js?v=2.1.0" type="text/javascript"></script>
+<!-- Material Dashboard DEMO methods, don't include it in your project! -->
+<script src="../static/assets/demo/demo.js"></script>
