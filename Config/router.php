@@ -31,6 +31,20 @@ $router->get('/users' , function () {
 });
 
 
+$router->get('/chantier/add' , function () {
+
+    $route = new \Controllers\ChantierController();
+    $route->addChantier();
+});
+
+$router->post('/chantier/add' , function () {
+
+    $route = new \Controllers\ChantierController();
+    $route->postaddChantier();
+});
+
+
+
 $router->set404(function() {
     header('HTTP/1.1 404 Not Found');
     require './404.html';

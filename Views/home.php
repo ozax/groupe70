@@ -28,13 +28,13 @@
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="<?=$repertory ?>/users">
-                        <i class="material-icons">content_paste</i>
+                        <i class="material-icons">perm_contact_calendar</i>
                         <p>Liste utilisateurs</p>
                     </a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="#">
-                        <i class="material-icons">content_paste</i>
+                        <i class="material-icons">calendar_today</i>
                         <p>Planning</p>
                     </a>
                 </li>
@@ -46,7 +46,7 @@
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="#">
-                        <i class="material-icons">bubble_chart</i>
+                        <i class="material-icons">insert_invitation</i>
                         <p>Planning salle</p>
                     </a>
                 </li>
@@ -58,14 +58,14 @@
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="#">
-                        <i class="material-icons">library_books</i>
+                        <i class="material-icons">business</i>
                         <p>Societe</p>
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">
-                        <i class="material-icons">library_books</i>
-                        <p>Chantier</p>
+                    <a class="nav-link" href="<?=$repertory ?>/chantier/add">
+                        <i class="material-icons">location_city</i>
+                        <p>Chantiers</p>
                     </a>
                 </li>
                 <li class="nav-item ">

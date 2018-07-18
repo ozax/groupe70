@@ -21,6 +21,11 @@
                             </div>
 
                             <div class="form-group">
+                                <label>Entreprise </label>
+                                <input type="text" name="Entreprise"  class="form-control" id="Entrprise " aria-describedby="Entreprise" placeholder="Enter Entreprise">
+                            </div>
+
+                            <div class="form-group">
                                 <label>phone </label>
                                 <input type="number" name="phone"  class="form-control" id="phone" aria-describedby="entrer votre num telephone" placeholder="Enter Phone">
                             </div>
