@@ -15,7 +15,12 @@ class chantier
     }
 
 
-
+    public function getAllChantier()
+    {
+        $db = $this->db;
+        $reponse = $this->db->query("SELECT * FROM chantiers");
+        return $reponse->fetchAll($db::FETCH_ASSOC);
+    }
 
     public function ajouterChantier($nomChantier, $adresse)
     {

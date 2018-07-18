@@ -6,12 +6,6 @@ $router->get('/' , function () {
     $route->indexHome();
 });
 
-$router->get('/login' , function () {
-
-    $route = new \Controllers\AuthentificationController();
-    $route->login();
-});
-
 $router->get('/users/add' , function () {
 
     $route = new \Controllers\UserController();
@@ -41,6 +35,12 @@ $router->post('/chantier/add' , function () {
 
     $route = new \Controllers\ChantierController();
     $route->postaddChantier();
+});
+
+$router->get('/chantier' , function () {
+
+    $route = new \Controllers\ChantierController();
+    $route->showchantier();
 });
 
 

@@ -63,7 +63,7 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="<?=$repertory ?>/chantier/add">
+                    <a class="nav-link" href="<?=$repertory ?>/chantier">
                         <i class="material-icons">location_city</i>
                         <p>Chantiers</p>
                     </a>

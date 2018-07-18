@@ -41,6 +41,18 @@
                                     <td>
                                        <?=$user["email"]?>
                                     </td>
+                                    <td>
+                                        <div align="right">
+                                            <button class="btn btn-dark" >Modifier</button>
+                                        </div>
+                                    </td>
+                                <td>
+                                    <div align="right">
+                                        <button class="btn btn-danger" >Supprimer</button>
+                                    </div>
+                                </td>
+
+
                                 </tr>
                                  <?php endforeach;?>
 

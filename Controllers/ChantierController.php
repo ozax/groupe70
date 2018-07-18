@@ -30,4 +30,13 @@ class ChantierController
         $chantier = $chantier->ajouterChantier($_POST["nomChantier"],$_POST["adresse"]);
     }
 
+    public function showchantier()
+    {
+        require "./Config/config.php";
+        $chantier = new chantier();
+        $chantier = $chantier->getAllChantier();
+        require "./Views/showChantier.php";
+
+    }
+
 }
