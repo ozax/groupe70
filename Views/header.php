@@ -12,5 +12,8 @@
     <link href="<?=$repertory?>/static/assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="<?=$repertory?>/static/assets/demo/demo.css" rel="stylesheet" />
+
+    <link href="<?=$repertory?>/static/fullcalendar.css" rel="stylesheet" />
+    <link href="<?=$repertory?>/static/css/calandarcss.css" rel="stylesheet" />
 </head>
 

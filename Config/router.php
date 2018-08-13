@@ -3,7 +3,7 @@ $router = new \Services\Router();
 
 $router->get('/' , function () {
     $route = new \Controllers\HomeController();
-    $route->indexHome();
+    $route->showClandar();
 });
 
 $router->get('/users/add' , function () {
@@ -17,6 +17,8 @@ $router->post('/users/add' , function () {
     $route = new \Controllers\UserController();
     $route->postadduser();
 });
+
+
 
 $router->get('/users' , function () {
 
@@ -42,6 +44,25 @@ $router->get('/chantier' , function () {
     $route = new \Controllers\ChantierController();
     $route->showchantier();
 });
+
+$router->get('/login' , function () {
+
+    $route = new \Controllers\UserController();
+    $route->LoginUser();
+});
+
+$router->post('/login' , function () {
+    $route = new \Controllers\UserController();
+    $route->PostLoginUser();
+});
+
+/**$router->get('/calandar' , function () {
+    $route = new \Controllers\HomeController();
+    $route->showClandar();
+});**/
+
+
+
 
 
 

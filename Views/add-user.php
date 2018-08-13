@@ -1,3 +1,4 @@
+<?php include "./Views/header.php"; ?>
 <?php include "./Views/home.php"; ?>
 <div class="main-panel">
 <div class="content">
@@ -7,6 +8,11 @@
                 <div class="card">
                     <div class="card-header card-header-primary">
                         <h4 class="card-title">Ajouter Utilisateur</h4>
+                        <?php
+                        $msg = new \Services\FlashMessages();
+                        if (isset($msg))
+                            $msg->display();
+                        ?>
                     </div>
                     <div class="card-body">
                         <form action="" method="POST">

@@ -1,3 +1,4 @@
+<?php include "./Views/header.php"; ?>
 <?php require "./Views/home.php";?>
     <div class="main-panel">
     <div class="content">
@@ -6,10 +7,11 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header card-header-primary">
-                    <h4 class="card-title ">Liste des utilisateurs</h4>
+                    <h4 class="card-title ">Liste des chantiers</h4>
                     <div align="right">
                         <a class="john" href="<?=$repertory ?>/chantier/add">
                             <button class="btn btn-secondary" >Ajouter</button>
+                        </a>
                     </div>
                 </div>
                 <div class="card-body">
@@ -53,5 +55,4 @@
             </div>
         </div>
     </div>
-
-<?php require "./Views/footer.php";?>
+<?php include "./Views/footer.php"; ?>

@@ -1,0 +1,32 @@
+--------------------------------------------------
+Version actuelle (v2). Publiée le 21-06-2017
+--------------------------------------------------
+
+Fixed : suppression de l'image lors de la suppression d'un événement.
+
+Added : support multi-langue (pour le control panel et les calendriers).
+
+Added : possibilité de récupérer son mot de passe perdu.
+
+Review : renforcement de la sécurité.
+
+Fixed : date de début et de fin de l'événement.
+
+Added : rajout de quelques liens dans le contrôle panel.
+
+Added : installateur automatique.
+
+Added: vérificateur de version.
+
+Added : revu complète de la documentation.
+
+Review : quelques améliorations mineures niveau traduction, design et fonctionnement du script.
+
+
+--------------------------------------------------
+v1. Publiée le 21-06-2016
+--------------------------------------------------
+
+Version initial
+
+

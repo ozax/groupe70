@@ -1,0 +1,30 @@
+--------------------------------------------------
+Current version (v2). Published on 06-21-2017
+--------------------------------------------------
+
+Fixed: deletes the image when deleting an event.
+
+Added: multi-language support (for control panel and calendars).
+
+Added: possibility to recover your lost password.
+
+Review: strengthening security.
+
+Fixed: the start and end date of the event.
+
+Added: added some links in the control panel.
+
+Added: automatic installer.
+
+Added: comprehensive review of documentation.
+
+Added: version checker.
+
+Review: some minor improvements level translation, design and script operation.
+
+
+--------------------------------------------------
+v1. Published on 06-21-2016
+--------------------------------------------------
+
+Initial release

@@ -10,6 +10,7 @@ namespace Controllers;
 
 
 use Models\chantier;
+use Services\FlashMessages;
 
 class ChantierController
 {
@@ -25,9 +26,11 @@ class ChantierController
    public function postaddChantier()
     {
         require "./Config/config.php";
-        require "./Views/add-chantier.php";
         $chantier = new chantier();
         $chantier = $chantier->ajouterChantier($_POST["nomChantier"],$_POST["adresse"]);
+        $msg = new FlashMessages();
+        $msg->success('Le chantier a bien été ajouté', $repertory.'/chantier/add');
+        require "./Views/add-chantier.php";
     }
 
     public function showchantier()

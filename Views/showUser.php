@@ -1,3 +1,4 @@
+<?php include "./Views/header.php"; ?>
 <?php require "./Views/home.php";?>
     <div class="main-panel">
 <div class="content">
@@ -7,6 +8,11 @@
                 <div class="card">
                     <div class="card-header card-header-primary">
                         <h4 class="card-title ">Liste des utilisateurs</h4>
+                        <div align="right">
+                            <a class="john" href="<?=$repertory ?>/users/add">
+                                <button class="btn btn-secondary" >Ajouter</button>
+                            </a>
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">

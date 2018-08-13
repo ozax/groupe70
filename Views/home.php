@@ -1,6 +1,6 @@
 <?php require "./Views/header.php";?>
 <body class="">
-<div class="wrapper ">
+<div class="wrapper">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="<?=$repertory ?>/static/assets/img/sidebar-1.jpg">
         <!--
           Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
@@ -9,21 +9,15 @@
       -->
         <div class="logo">
             <a href="./" class="simple-text logo-normal">
-                Groupe 70
+                Groupe 70 <a>Bienvenue, <?=$_SESSION['login_name']?> <!-- le Nom et Prenom de l'utilisateur ou de l'admin --></a>
             </a>
         </div>
         <div class="sidebar-wrapper">
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="<?=$repertory ?>" >
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?=$repertory ?>/users/add">
-                        <i class="material-icons">person</i>
-                        <p>Ajouter utilisateur</p>
                     </a>
                 </li>
                 <li class="nav-item ">
@@ -83,6 +77,7 @@
 
             </ul>
         </div>
+
     </div>
 
 

@@ -46,6 +46,13 @@ class user
         ));
     }
 
+    public function getLogin($email, $password){
+        $db = $this->db;
+        $reponse = $this->db->query("SELECT * FROM utilisateur WHERE email = '$email' AND password = '$password'");
+        return $reponse->fetch($db::FETCH_ASSOC);
+    }
+
+
 
     /**public function deleteEditeur($id){
     $db = $this->db;
