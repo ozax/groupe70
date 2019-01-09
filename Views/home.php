@@ -45,13 +45,13 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="<?=$repertory ?>/moyens">
                         <i class="material-icons">location_ons</i>
                         <p>Moyens</p>
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="<?=$repertory ?>/societe">
                         <i class="material-icons">business</i>
                         <p>Societe</p>
                     </a>
@@ -68,12 +68,7 @@
                         <p>Stockage</p>
                     </a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="#">
-                        <i class="material-icons">notifications</i>
-                        <p>Notifications</p>
-                    </a>
-                </li>
+
 
             </ul>
         </div>

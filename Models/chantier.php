@@ -22,6 +22,7 @@ class chantier
         return $reponse->fetchAll($db::FETCH_ASSOC);
     }
 
+
     public function ajouterChantier($nomChantier, $adresse)
     {
         $db = $this->db;

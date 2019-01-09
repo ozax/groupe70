@@ -45,6 +45,45 @@ $router->get('/chantier' , function () {
     $route->showchantier();
 });
 
+$router->get('/moyens/add' , function () {
+
+    $route = new \Controllers\MoyensController();
+    $route->addMoyens();
+});
+
+$router->post('/moyens/add' , function () {
+
+    $route = new \Controllers\MoyensController();
+    $route->postaddMoyens();
+});
+
+$router->get('/moyens' , function () {
+
+    $route = new \Controllers\MoyensController();
+    $route->showmoyens();
+});
+
+$router->get('/societe/add' , function () {
+
+    $route = new \Controllers\SocieteController();
+    $route->addSociete();
+});
+
+$router->post('/societe/add' , function () {
+
+    $route = new \Controllers\SocieteController();
+    $route->postaddSociete();
+});
+
+$router->get('/societe' , function () {
+
+    $route = new \Controllers\SocieteController();
+    $route->showsociete();
+});
+
+
+
+
 $router->get('/login' , function () {
 
     $route = new \Controllers\UserController();
