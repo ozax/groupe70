@@ -16,8 +16,8 @@
             <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link" href="<?=$repertory ?>" >
-                        <i class="material-icons">dashboard</i>
-                        <p>Dashboard</p>
+                        <i class="material-icons">calendar_today</i>
+                        <p>Planning</p>
                     </a>
                 </li>
                 <li class="nav-item ">
@@ -26,20 +26,10 @@
                         <p>Liste utilisateurs</p>
                     </a>
                 </li>
+
+
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">
-                        <i class="material-icons">calendar_today</i>
-                        <p>Planning</p>
-                    </a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="#">
-                        <i class="material-icons">library_books</i>
-                        <p>Historique</p>
-                    </a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="<?=$repertory ?>/salles">
                         <i class="material-icons">insert_invitation</i>
                         <p>Planning salle</p>
                     </a>
@@ -48,6 +38,12 @@
                     <a class="nav-link" href="<?=$repertory ?>/moyens">
                         <i class="material-icons">location_ons</i>
                         <p>Moyens</p>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="<?=$repertory ?>/aires">
+                        <i class="material-icons">library_books</i>
+                        <p>Les Aires</p>
                     </a>
                 </li>
                 <li class="nav-item ">
@@ -63,7 +59,7 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="<?=$repertory ?>/stockage">
                         <i class="material-icons">library_books</i>
                         <p>Stockage</p>
                     </a>

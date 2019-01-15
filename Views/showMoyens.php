@@ -25,6 +25,9 @@
                             <th>
                                 Dénomination
                             </th>
+                            <th>
+                                Chantier
+                            </th>
                             </thead>
 
                             <tbody>
@@ -35,6 +38,9 @@
                                     </td>
                                     <td>
                                         <?=$moyens["denomination"]?>
+                                    </td>
+                                    <td>
+                                        <?=$moyens["Chantier"]?>
                                     </td>
                                     <td>
                                         <div align="right">

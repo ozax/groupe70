@@ -22,7 +22,8 @@ class UserController
 
     }
 
-    public function postadduser(){
+    public function postadduser()
+    {
         require "./Config/config.php";
 
 
@@ -34,10 +35,43 @@ class UserController
         require "./Views/add-user.php";
 
 
-}
+    }
+
+    public function editUser($id)
+    {
+        require "./config/config.php";
+        $user = new user($id);
+        $user = $user->getUser($id);
+        $_SESSION['utilisateur']['nom'] = $user['nom'];
+        $_SESSION['utilisateur']['prenom'] = $user['prenom'];
+        $_SESSION['utilisateur']['phone'] = $user['phone'];
+        $_SESSION['utilisateur']['email'] = $user['email'];
+        $_SESSION['utilisateur']['password'] = $user['password'];
+        require './Views/add-user.php';
+    }
+
+    public function postEditUser($id)
+    {
+        require "./config/config.php";
+        $user = new user($id);
+        $user = $user->updateUser($id, $_POST["nom"], $_POST["prenom"],$_POST["phone"],$_POST["email"],$_POST["password"]);
+        $msg = new FlashMessages();
+        $msg->success('L\'utilisateur a bien été modifié', $repertory . '/users');
 
 
-   public function showuser(){
+    }
+
+    public function deleteUser($id)
+    {
+        require "./config/config.php";
+        $user = new user();
+        $user = $user->deleteUser($id);
+        $msg = new FlashMessages();
+        $msg->success('L\'utilisateur a bien été supprimer', $repertory . '/users');
+    }
+
+   public function showuser()
+   {
        require "./Config/config.php";
        $user = new user();
        $user = $user->getAllUsers();

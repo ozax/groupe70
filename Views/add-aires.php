@@ -8,7 +8,7 @@
 
                 <div class="card">
                     <div class="card-header card-header-primary">
-                        <h4 class="card-title">Ajouter Moyens</h4>
+                        <h4 class="card-title">Ajouter Les Aires</h4>
                         <?php
                         $msg = new \Services\FlashMessages();
                         if (isset($msg))
@@ -18,14 +18,14 @@
                     <div class="card-body">
                         <form action="" method="POST">
                             <div class="form-group">
-                                <label>Immatriculation</label>
+                                <label>Dénomination</label>
                                 <input type="text" name="immatriculation"  class="form-control" id="immatriculation" aria-describedby="Immatriculation" placeholder="Enter Immatriculation" required="true">
                             </div>
 
 
 
                             <div class="form-group">
-                                <label>Dénomination</label>
+                                <label>Abréviation</label>
                                 <input type="text" name="denomination"  class="form-control" id="denomination" aria-describedby="Dénomination" placeholder="Enter Dénomination" required="true">
                             </div>
 
@@ -36,8 +36,8 @@
                                 <select class="form-control" id="chantier" name="chantier">
                                     <?PHP foreach ($chantier as $chantier): ?>
 
-                                    <option value="<?=$chantier["nomChantier"]?>"> <?=$chantier["nomChantier"]?>
-                                    </option>
+                                        <option value="<?=$chantier["nomChantier"]?>"> <?=$chantier["nomChantier"]?>
+                                        </option>
                                     <?php endforeach;?>
 
                                 </select>

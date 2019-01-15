@@ -1,10 +1,17 @@
 <?php
 $router = new \Services\Router();
-
+// **********calandrier**************
 $router->get('/' , function () {
     $route = new \Controllers\HomeController();
     $route->showClandar();
 });
+
+$router->get('/salles' , function () {
+    $route = new \Controllers\HomeController();
+    $route->showClandarSalle();
+});
+
+//************** users******************
 
 $router->get('/users/add' , function () {
 
@@ -18,6 +25,22 @@ $router->post('/users/add' , function () {
     $route->postadduser();
 });
 
+$router->get('/users/edit/(\d+)' , function ($id) {
+
+    $route = new \Controllers\UserController();
+    $route->editUser($id);
+});
+
+$router->post('/users/edit/(\d+)' , function ($id) {
+
+    $route = new \Controllers\UserController();
+    $route->postEditUser($id);
+});
+
+$router->get('/users/delete/(\d+)' , function ($id) {
+    $route = new \Controllers\UserController();
+    $route->deleteUser($id);
+});
 
 
 $router->get('/users' , function () {
@@ -26,6 +49,7 @@ $router->get('/users' , function () {
     $route->showuser();
 });
 
+// **********chantier*************************
 
 $router->get('/chantier/add' , function () {
 
@@ -45,6 +69,8 @@ $router->get('/chantier' , function () {
     $route->showchantier();
 });
 
+// ***********moyens*******************
+
 $router->get('/moyens/add' , function () {
 
     $route = new \Controllers\MoyensController();
@@ -62,6 +88,8 @@ $router->get('/moyens' , function () {
     $route = new \Controllers\MoyensController();
     $route->showmoyens();
 });
+
+// ***********societe*******************
 
 $router->get('/societe/add' , function () {
 
@@ -81,8 +109,51 @@ $router->get('/societe' , function () {
     $route->showsociete();
 });
 
+// ***********stockage*******************
+
+$router->get('/stockage/add' , function () {
+
+    $route = new \Controllers\StockageController();
+    $route->addStockage();
+});
 
 
+$router->post('/stockage/add' , function () {
+
+    $route = new \Controllers\StockageController();
+    $route->postaddStockage();
+});
+
+$router->get('/stockage' , function () {
+
+    $route = new \Controllers\StockageController();
+    $route->showsstockage();
+});
+
+// ***********Aires*******************
+
+$router->get('/aires/add' , function () {
+
+    $route = new \Controllers\AiresController();
+    $route->addAires();
+});
+
+$router->post('/aires/add' , function () {
+
+    $route = new \Controllers\AiresController();
+    $route->postaddAires();
+});
+
+$router->get('/aires' , function () {
+
+    $route = new \Controllers\AiresController();
+    $route->showaires();
+});
+
+
+
+
+// ***********login*******************
 
 $router->get('/login' , function () {
 

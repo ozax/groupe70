@@ -30,6 +30,27 @@ class user
     return $reponse->fetchAll($db::FETCH_ASSOC);
     }
 
+    public function getUser($id)
+    {
+        $db = $this->db;
+        $reponse = $this->db->query("SELECT * FROM utilisateur WHERE id = $id");
+        return $reponse->fetch($db::FETCH_ASSOC);
+    }
+
+    public function updateUser($id,$nom,$prenom,$phone,$email,$password){
+        $db = $this->db;
+        $query = $db->prepare("UPDATE utilisateur SET nom= :n, prenom =:p ,phone=:ph ,email=:e ,password=:pw WHERE utilisateur.id=$id");
+        return $query->execute(array(
+
+            'n' => $nom,
+            'p' => $prenom,
+            'ph'=>$phone,
+            'e'=>$email,
+            'pw'=>$password,
+        ));
+
+    }
+
 
 
     public function ajouterUtilisateur($nom, $prenom, $phone,$email, $password)
@@ -50,6 +71,14 @@ class user
         $db = $this->db;
         $reponse = $this->db->query("SELECT * FROM utilisateur WHERE email = '$email' AND password = '$password'");
         return $reponse->fetch($db::FETCH_ASSOC);
+    }
+
+    public function deleteUser($id){
+        $db = $this->db;
+        $query = $db->prepare("DELETE FROM `utilisateur` WHERE `utilisateur`.`id` =:id");
+        return $query->execute(array(
+            'id'=>$id
+        ));
     }
 
 

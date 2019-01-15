@@ -2,19 +2,18 @@
 /**
  * Created by PhpStorm.
  * User: AMINE
- * Date: 02/01/2019
- * Time: 15:36
+ * Date: 14/01/2019
+ * Time: 16:10
  */
 
 namespace Models;
 use Services\Connect;
 
-
-class moyens
+class aires
 {
     private $id;
-    private $immatriculation;
     private $denomination;
+    private $abreviation;
     private $Chantier;
 
 
@@ -25,21 +24,21 @@ class moyens
     }
 
 
-    public function getAllMoyens ()
+    public function getAllAires ()
     {
         $db = $this->db;
-        $reponse = $this->db->query("SELECT * FROM moyens");
+        $reponse = $this->db->query("SELECT * FROM aires");
         return $reponse->fetchAll($db::FETCH_ASSOC);
     }
 
-    public function ajouterMoyens ($immatriculation,$denomination,$Chantier)
+    public function ajouterAires ($denomination,$abreviation,$Chantier)
     {
         $db = $this->db;
-        $query = $db->prepare ("INSERT INTO moyens(immatriculation,denomination,Chantier) VALUES (:immatriculation,:denomination,:chantier)");
+        $query = $db->prepare ("INSERT INTO aires(denomination,abreviation,Chantier) VALUES (:denomination,:abreviation,:chantier)");
 
         return $query->execute (array(
-            'immatriculation' => $immatriculation,
             'denomination' => $denomination,
+            'abreviation' => $abreviation,
             'chantier' => $Chantier,
 
         ));

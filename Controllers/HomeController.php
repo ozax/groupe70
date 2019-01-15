@@ -27,6 +27,14 @@ class HomeController
 
     }
 
+    public function showClandarSalle()
+    {
+        require "./config/config.php";
+        require './Views/calanderSalle.php';
+
+
+    }
+
 }
 
 
