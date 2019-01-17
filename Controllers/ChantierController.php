@@ -33,6 +33,41 @@ class ChantierController
         require "./Views/add-chantier.php";
     }
 
+
+
+    public function editChantier($id)
+    {
+        require "./config/config.php";
+        $chantier = new chantier($id);
+        $chantier = $chantier->getChantier($id);
+        $_SESSION['chantiers']['nomChantier'] = $chantier['nomChantier'];
+        $_SESSION['chantiers']['adresse'] = $chantier['adresse'];
+
+        require './Views/add-chantier.php';
+    }
+
+    public function postEditChantier($id)
+    {
+        require "./config/config.php";
+        $chantier = new chantier($id);
+        $chantier = $chantier->updateChantier($id, $_POST["nomChantier"], $_POST["adresse"]);
+        $msg = new FlashMessages();
+        $msg->success('Le chantier a bien été modifié', $repertory . '/chantier');
+
+
+    }
+
+    public function deleteChantier($id)
+    {
+        require "./config/config.php";
+        $chantier = new chantier();
+        $chantier = $chantier->deleteChantier($id);
+        $msg = new FlashMessages();
+        $msg->success('Le chantier a bien été supprimer', $repertory . '/chantier');
+    }
+
+
+
     public function showchantier()
     {
         require "./Config/config.php";

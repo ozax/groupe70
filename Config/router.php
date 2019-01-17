@@ -63,6 +63,23 @@ $router->post('/chantier/add' , function () {
     $route->postaddChantier();
 });
 
+$router->get('/chantier/edit/(\d+)' , function ($id) {
+
+    $route = new \Controllers\ChantierController();
+    $route->editChantier($id);
+});
+
+$router->post('/chantier/edit/(\d+)' , function ($id) {
+
+    $route = new \Controllers\ChantierController();
+    $route->postEditChantier($id);
+});
+
+$router->get('/chantier/delete/(\d+)' , function ($id) {
+    $route = new \Controllers\ChantierController();
+    $route->deleteChantier($id);
+});
+
 $router->get('/chantier' , function () {
 
     $route = new \Controllers\ChantierController();
@@ -103,6 +120,23 @@ $router->post('/societe/add' , function () {
     $route->postaddSociete();
 });
 
+$router->get('/societe/edit/(\d+)' , function ($id) {
+
+    $route = new \Controllers\SocieteController();
+    $route->editSociete($id);
+});
+
+$router->post('/societe/edit/(\d+)' , function ($id) {
+
+    $route = new \Controllers\SocieteController();
+    $route->postEditSociete($id);
+});
+
+$router->get('/societe/delete/(\d+)' , function ($id) {
+    $route = new \Controllers\SocieteController();
+    $route->deleteSociete($id);
+});
+
 $router->get('/societe' , function () {
 
     $route = new \Controllers\SocieteController();
@@ -122,6 +156,23 @@ $router->post('/stockage/add' , function () {
 
     $route = new \Controllers\StockageController();
     $route->postaddStockage();
+});
+
+$router->get('/stockage/edit/(\d+)' , function ($id) {
+
+    $route = new \Controllers\StockageController();
+    $route->editStockage($id);
+});
+
+$router->post('/stockage/edit/(\d+)' , function ($id) {
+
+    $route = new \Controllers\StockageController();
+    $route->postEditStockage($id);
+});
+
+$router->get('/stockage/delete/(\d+)' , function ($id) {
+    $route = new \Controllers\StockageController();
+    $route->deleteStockage($id);
 });
 
 $router->get('/stockage' , function () {

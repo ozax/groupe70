@@ -36,6 +36,28 @@ class stockage
         return $reponse->fetchAll($db::FETCH_ASSOC);
     }
 
+    public function getStockage($id)
+    {
+        $db = $this->db;
+        $reponse = $this->db->query("SELECT * FROM stockage WHERE id = $id");
+        return $reponse->fetch($db::FETCH_ASSOC);
+    }
+
+    public function updateStockage($id,$denomination,$lieux,$quantite,$entreprise,$Chantier)
+    {
+        $db = $this->db;
+        $query = $db->prepare("UPDATE stockage SET denomination= :n, lieux= :l , quantite= :q, entreprise= :e, Chantier= :ch   WHERE chantier.id=$id");
+        return $query->execute(array(
+
+            'n' => $denomination,
+            'l' => $lieux,
+            'q' => $quantite,
+            'e' => $entreprise,
+            'ch' => $Chantier,
+        ));
+
+    }
+
     public function ajouterStockage ($denomination,$lieux,$quantite,$entreprise,$Chantier)
     {
         $db = $this->db;
@@ -52,20 +74,13 @@ class stockage
     }
 
 
-    public function ajouterMoyens ($immatriculation,$denomination,$Chantier)
-    {
+    public function deleteStockage($id){
         $db = $this->db;
-        $query = $db->prepare ("INSERT INTO moyens(immatriculation,denomination,Chantier) VALUES (:immatriculation,:denomination,:chantier)");
-
-        return $query->execute (array(
-            'immatriculation' => $immatriculation,
-            'denomination' => $denomination,
-            'chantier' => $Chantier,
-
+        $query = $db->prepare("DELETE FROM `stockage` WHERE `stockage`.`id` =:id");
+        return $query->execute(array(
+            'id'=>$id
         ));
     }
-
-
 
 
 }

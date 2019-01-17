@@ -32,6 +32,38 @@ class SocieteController
 
     }
 
+    public function editSociete($id)
+    {
+        require "./config/config.php";
+        $societe = new societe($id);
+        $societe = $societe->getSociete($id);
+        $_SESSION['societe']['raisonSociale'] = $societe['raisonSociale'];
+        $_SESSION['societe']['telephone'] = $societe['telephone'];
+        $_SESSION['societe']['adresse'] = $societe['adresse'];
+
+        require './Views/add-societe.php';
+    }
+
+    public function postEditSociete($id)
+    {
+        require "./config/config.php";
+        $societe = new societe($id);
+        $societe = $societe->updateSociete($id, $_POST["raisonSociale"],$_POST["telephone"], $_POST["adresse"]);
+        $msg = new FlashMessages();
+        $msg->success('La societe a bien été modifié', $repertory . '/societe');
+
+
+    }
+
+    public function deleteSociete($id)
+    {
+        require "./config/config.php";
+        $societe = new societe();
+        $societe = $societe->deleteSociete($id);
+        $msg = new FlashMessages();
+        $msg->success('La Societe a bien été supprimer', $repertory . '/societe');
+    }
+
     public function showsociete()
     {
         require "./Config/config.php";
