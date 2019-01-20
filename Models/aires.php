@@ -31,6 +31,26 @@ class aires
         return $reponse->fetchAll($db::FETCH_ASSOC);
     }
 
+    public function getAire($id)
+    {
+        $db = $this->db;
+        $reponse = $this->db->query("SELECT * FROM aires WHERE id = $id");
+        return $reponse->fetch($db::FETCH_ASSOC);
+    }
+
+    public function updateAire($id,$denomination,$abreviation,$Chantier)
+    {
+        $db = $this->db;
+        $query = $db->prepare("UPDATE aires SET denomination= :n, abreviation= :a, Chantier= :ch   WHERE aires.id=$id");
+        return $query->execute(array(
+
+            'n' => $denomination,
+            'a' => $abreviation,
+            'ch' => $Chantier,
+        ));
+
+    }
+
     public function ajouterAires ($denomination,$abreviation,$Chantier)
     {
         $db = $this->db;
@@ -41,6 +61,14 @@ class aires
             'abreviation' => $abreviation,
             'chantier' => $Chantier,
 
+        ));
+    }
+
+    public function deleteAire($id){
+        $db = $this->db;
+        $query = $db->prepare("DELETE FROM `aires` WHERE `aires`.`id` =:id");
+        return $query->execute(array(
+            'id'=>$id
         ));
     }
 

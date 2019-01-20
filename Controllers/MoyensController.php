@@ -38,6 +38,37 @@ class MoyensController
         require "./Views/add-moyens.php";
 
     }
+    public function editMoyen($id)
+    {
+        require "./config/config.php";
+        $moyens = new moyens($id);
+        $moyens = $moyens->getMoyen($id);
+        $_SESSION['moyens']['immatriculation'] = $moyens['immatriculation'];
+        $_SESSION['moyens']['denomination'] = $moyens['denomination'];
+        $_SESSION['moyens']['Chantier'] = $moyens['Chantier'];
+
+        require './Views/add-moyens.php';
+    }
+
+    public function postEditMoyen($id)
+    {
+        require "./config/config.php";
+        $moyens = new moyens($id);
+        $moyens = $moyens->updateMoyen($id,$_POST["immatriculation"], $_POST["denomination"], $_POST["Chantier"]);
+        $msg = new FlashMessages();
+        $msg->success('Le moyen a bien été modifié', $repertory . '/moyens');
+
+
+    }
+
+    public function deleteMoyen($id)
+    {
+        require "./config/config.php";
+        $moyens = new moyens();
+        $moyens = $moyens->deleteMoyen($id);
+        $msg = new FlashMessages();
+        $msg->success('Le moyen a bien été supprimer', $repertory . '/moyens');
+    }
 
     public function showmoyens()
     {

@@ -18,7 +18,7 @@
                         <form action="" method="POST">
                             <div class="form-group">
                                 <label>Raison Sociale</label>
-                                <input type="text" name="raisonSociale"  class="form-control" id="raisonSociale" aria-describedby="Raisn sociale" placeholder="Enter la raison sociale">
+                                <input value="<?php if (isset(  $_SESSION['societe']['raisonSociale'])) echo  $_SESSION['societe']['raisonSociale'] ?> " type="text" name="raisonSociale"  class="form-control" id="raisonSociale" aria-describedby="Raisn sociale" placeholder="Enter la raison sociale">
                             </div>
 
 
@@ -26,12 +26,12 @@
 
                             <div class="form-group">
                                 <label>Telephone </label>
-                                <input type="number" name="telephone"  class="form-control" id="telephone" aria-describedby="entrer votre num telephone" placeholder="Enter le num telePhone">
+                                <input value="<?php if (isset(  $_SESSION['societe']['telephone'])) echo  $_SESSION['societe']['telephone'] ?>" type="number" name="telephone"  class="form-control" id="telephone" aria-describedby="entrer votre num telephone" placeholder="Enter le num telePhone">
                             </div>
 
                             <div class="form-group">
                                 <label>Adresse</label>
-                                <input type="text" name="adresse"  class="form-control" id="adresse" aria-describedby="entrer votre adresse" placeholder="Enter Adresse">
+                                <input value="<?php if (isset(  $_SESSION['societe']['adresse'])) echo  $_SESSION['societe']['adresse']?> " type="text" name="adresse"  class="form-control" id="adresse" aria-describedby="entrer votre adresse" placeholder="Enter Adresse">
                             </div>
 
 
@@ -44,3 +44,4 @@
         </div>
     </div>
 </div>
+<?php unset($_SESSION['stockage']);?>

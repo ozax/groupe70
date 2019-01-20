@@ -44,15 +44,39 @@
                                     </td>
                                     <td>
                                         <div align="right">
-                                            <button class="btn btn-dark" >Modifier</button>
+                                            <a href="<?=$repertory?>/moyens/edit/<?=$moyens["id"]?>">
+                                                <button class="btn btn-dark" >Modifier</button>
                                         </div>
                                     </td>
                                     <td>
                                         <div align="right">
-                                            <button class="btn btn-danger" >Supprimer</button>
+                                            <a data-toggle="modal" data-target="#smoyens<?=$moyens["id"]?>">
+                                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                                <button class="btn btn-danger" >Supprimer</button>
+                                            </a>
                                         </div>
                                     </td>
                                 </tr>
+                                <div class="modal fade" id="smoyens<?=$moyens["id"]?>" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <!-- Le contenu du modal-->
+                                        <div class="modal-content">
+                                            <form methode='post' action='suparticle.php' enctype="multipart/form-data">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title" id="myModalLabel"><div class='icon'> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Supprimer un article</div></h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h1 class="h11"><b> Êtes-vous sûr de vouloir continuer ? </b> </h1>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                                        <a href="<?=$repertory?>/moyens/delete/<?=$moyens["id"]?>" type="submit" name='bmoyens' class="btn btn-danger">Supprimer</a>
+                                                    </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             <?php endforeach;?>
 
                             </tbody>

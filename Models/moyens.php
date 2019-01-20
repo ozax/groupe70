@@ -32,6 +32,25 @@ class moyens
         return $reponse->fetchAll($db::FETCH_ASSOC);
     }
 
+    public function getMoyen($id)
+    {
+        $db = $this->db;
+        $reponse = $this->db->query("SELECT * FROM moyens WHERE id = $id");
+        return $reponse->fetch($db::FETCH_ASSOC);
+    }
+
+    public function updateMoyen($id,$immatriculation,$denomination,$Chantier)
+    {
+        $db = $this->db;
+        $query = $db->prepare("UPDATE moyens SET immatriculation= :i , denomination= :n,Chantier= :ch   WHERE moyens.id=$id");
+        return $query->execute(array(
+            'i' => $immatriculation,
+            'n' => $denomination,
+            'ch' => $Chantier,
+        ));
+
+    }
+
     public function ajouterMoyens ($immatriculation,$denomination,$Chantier)
     {
         $db = $this->db;
@@ -42,6 +61,14 @@ class moyens
             'denomination' => $denomination,
             'chantier' => $Chantier,
 
+        ));
+    }
+
+    public function deleteMoyen($id){
+        $db = $this->db;
+        $query = $db->prepare("DELETE FROM `moyens` WHERE `moyens`.`id` =:id");
+        return $query->execute(array(
+            'id'=>$id
         ));
     }
 

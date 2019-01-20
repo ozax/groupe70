@@ -28,6 +28,38 @@ class AiresController
 
     }
 
+    public function editAire($id)
+    {
+        require "./config/config.php";
+        $aires = new aires($id);
+        $aires = $aires->getAire($id);
+        $_SESSION['aires']['denomination'] = $aires['denomination'];
+        $_SESSION['aires']['abreviation'] = $aires['abreviation'];
+        $_SESSION['aires']['Chantier'] = $aires['Chantier'];
+
+        require './Views/add-aires.php';
+    }
+
+    public function postEditAire($id)
+    {
+        require "./config/config.php";
+        $aires = new aires($id);
+        $aires = $aires->updateAire($id, $_POST["denomination"],$_POST["abreviation"], $_POST["Chantier"]);
+        $msg = new FlashMessages();
+        $msg->success('L aire de dechargement a bien été modifié', $repertory . '/aires');
+
+
+    }
+
+    public function deleteAire($id)
+    {
+        require "./config/config.php";
+        $aires = new aires();
+        $aires = $aires->deleteAire($id);
+        $msg = new FlashMessages();
+        $msg->success('L Aire a bien été supprimer', $repertory . '/aires');
+    }
+
     public function postaddAires()
     {
         require "./Config/config.php";

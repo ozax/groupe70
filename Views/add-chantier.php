@@ -18,12 +18,12 @@
                         <form action="" method="POST">
                             <div class="form-group">
                                 <label>Nom Chantier</label>
-                                <input type="text" name="nomChantier"  class="form-control" id="nom" aria-describedby="Chantier name" placeholder="Enter nom Chantier">
+                                <input value="<?php if (isset(  $_SESSION['chantiers']['nomChantier'])) echo  $_SESSION['chantiers']['nomChantier'] ?>" type="text" name="nomChantier"  class="form-control" id="nom" aria-describedby="Chantier name" placeholder="Enter nom Chantier">
                             </div>
 
                             <div class="form-group">
                                 <label>Adresse</label>
-                                <input type="text" name="adresse"  class="form-control" id="" aria-describedby="Adresse" placeholder="Enter Adresse">
+                                <input value= "<?php if (isset(  $_SESSION['chantiers']['adresse'])) echo  $_SESSION['chantiers']['adresse'] ?>" type="text" name="adresse"  class="form-control" id="" aria-describedby="Adresse" placeholder="Enter Adresse">
                             </div>
 
 
@@ -36,3 +36,4 @@
         </div>
     </div>
 </div>
+<?php unset($_SESSION['stockage']);?>

@@ -19,14 +19,14 @@
                         <form action="" method="POST">
                             <div class="form-group">
                                 <label>Dénomination</label>
-                                <input type="text" name="immatriculation"  class="form-control" id="immatriculation" aria-describedby="Immatriculation" placeholder="Enter Immatriculation" required="true">
+                                <input value="<?php if (isset(  $_SESSION['aires']['denomination'])) echo  $_SESSION['aires']['denomination'] ?>" type="text" name="denomination"  class="form-control" id="denomination" aria-describedby="Dénomination" placeholder="Enter le Dénomination" required="true">
                             </div>
 
 
 
                             <div class="form-group">
                                 <label>Abréviation</label>
-                                <input type="text" name="denomination"  class="form-control" id="denomination" aria-describedby="Dénomination" placeholder="Enter Dénomination" required="true">
+                                <input  value="<?php if (isset(  $_SESSION['aires']['abreviation'])) echo  $_SESSION['aires']['abreviation'] ?>" type="text" name="abreviation"  class="form-control" id="abreviation" aria-describedby="Abréviation" placeholder="Enter Abréviation" required="true">
                             </div>
 
 

@@ -100,6 +100,23 @@ $router->post('/moyens/add' , function () {
     $route->postaddMoyens();
 });
 
+$router->get('/moyens/edit/(\d+)' , function ($id) {
+
+    $route = new \Controllers\MoyensController();
+    $route->editMoyen($id);
+});
+
+$router->post('moyens/edit/(\d+)' , function ($id) {
+
+    $route = new \Controllers\MoyensController();
+    $route->postEditMoyen($id);
+});
+
+$router->get('/moyens/delete/(\d+)' , function ($id) {
+    $route = new \Controllers\MoyensController();
+    $route->deleteMoyen($id);
+});
+
 $router->get('/moyens' , function () {
 
     $route = new \Controllers\MoyensController();
@@ -193,6 +210,23 @@ $router->post('/aires/add' , function () {
 
     $route = new \Controllers\AiresController();
     $route->postaddAires();
+});
+
+$router->get('/aires/edit/(\d+)' , function ($id) {
+
+    $route = new \Controllers\AiresController();
+    $route->editAire($id);
+});
+
+$router->post('/aires/edit/(\d+)' , function ($id) {
+
+    $route = new \Controllers\AiresController();
+    $route->postEditAire($id);
+});
+
+$router->get('/aires/delete/(\d+)' , function ($id) {
+    $route = new \Controllers\AiresController();
+    $route->deleteAire($id);
 });
 
 $router->get('/aires' , function () {
