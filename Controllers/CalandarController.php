@@ -14,6 +14,15 @@ use Models\calandar;
 
 class CalandarController
 {
+
+    public function addCalander()
+    {
+        require "./Config/config.php";
+        require "./Views/add-calander.php";
+
+
+    }
+
     public function getCalandar()
     {
 

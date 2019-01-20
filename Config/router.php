@@ -1,6 +1,20 @@
 <?php
 $router = new \Services\Router();
+
 // **********calandrier**************
+$router->get('/calander/add' , function () {
+
+    $route = new \Controllers\CalandarController();
+    $route->addCalander();
+});
+
+$router->post('/calander/add' , function () {
+
+    $route = new \Controllers\CalandarController();
+    $route->postaddCalandar();
+});
+
+
 $router->get('/' , function () {
     $route = new \Controllers\HomeController();
     $route->showClandar();
