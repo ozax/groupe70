@@ -11,6 +11,11 @@ $router->get('/salles' , function () {
     $route->showClandarSalle();
 });
 
+$router->get('/testcalandar' , function () {
+    $route = new \Controllers\CalandarController();
+    $route->getCalandar();
+});
+
 //************** users******************
 
 $router->get('/users/add' , function () {
